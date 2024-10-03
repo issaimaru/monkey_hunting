@@ -38,7 +38,7 @@ function reset(){
     World.add(engine.world, square1);
 
     World.remove(engine.world, square2);
-    square2 = Bodies.circle(200, ground.bounds.max.y - 50, 12.1, { 
+    square2 = Bodies.circle(200, ground.bounds.max.y - 50, 20, { 
         mass: 1, 
         friction: 0, 
         frictionAir: 0, 
@@ -85,12 +85,12 @@ engine.world.gravity.y = 9.81
 
 // 静止オブジェクト(空中の床と地面)【①】
 const floor3 = Bodies.rectangle(10, 420, 300, 30, { angle: -Math.PI / 2, isStatic: true, label: 'floor3' });
-const ground = Bodies.rectangle(400, 585, 850, 30, { isStatic: true ,label: 'ground'});
+const ground = Bodies.rectangle(100, 585, 850, 30, { isStatic: true ,label: 'ground'});
 
 
 // 可動オブジェクト（正方形と円）【②】
 var square1 = Bodies.rectangle(Math.random() * ( 800 - 400 ) + 400, 100, 20, 20, { mass: 100, friction: 0, frictionAir:0, restitution: 1, label: 'square1',isStatic:true });
-var square2 = Bodies.circle(200, ground.bounds.max.y - 50, 12.1, { mass: 1,friction: 0 ,frictionAir:0 ,restitution: 1, label: 'square2' });
+var square2 = Bodies.circle(200, ground.bounds.max.y - 50, 20, { mass: 1,friction: 0 ,frictionAir:0 ,restitution: 1, label: 'square2' });
 
 // オブジェクトの追加【③】
 World.add(engine.world, [floor3, ground, square1, square2]);
