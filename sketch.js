@@ -85,7 +85,7 @@ engine.world.gravity.y = 9.81
 
 // 静止オブジェクト(空中の床と地面)【①】
 const floor3 = Bodies.rectangle(10, 420, 300, 30, { angle: -Math.PI / 2, isStatic: true, label: 'floor3' });
-const ground = Bodies.rectangle(100, 585, 850, 30, { isStatic: true ,label: 'ground'});
+const ground = Bodies.rectangle(400, 585, 850, 30, { isStatic: true ,label: 'ground'});
 
 
 // 可動オブジェクト（正方形と円）【②】
