@@ -14,7 +14,7 @@ const render = Render.create({
     engine: engine,
 })
 
-engine.timing.timeScale = 0.1; // タイムスケールを設定
+engine.timing.timeScale = 0.2; // タイムスケールを設定
 
 
 // 衝突回数をカウントする変数
@@ -146,7 +146,7 @@ Matter.Events.on(mouseConstraint, 'mouseup', function(event) {
             y: (dragEnd.y - dragStart.y) * 0.1  // スケーリングファクターを調整
         };
 
-        var maxSpeed = 4; // 最大速度の値を設定
+        var maxSpeed = 8; // 最大速度の値を設定
     var speed = Math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y);
 
     if (speed > maxSpeed) {
